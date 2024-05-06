@@ -4,7 +4,7 @@ import NavLinks from "./nav-links";
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 md:px-2">
+    <div className="flex flex-col px-3 md:px-2">
       <Link
         className="mb-2 flex h-16 items-end justify-start mt-2 bg-blue-600 p-4 md:h-16"
         href="/dashboard/uploadpage"

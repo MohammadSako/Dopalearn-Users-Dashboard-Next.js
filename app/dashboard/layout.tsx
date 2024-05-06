@@ -3,7 +3,7 @@ import { NavBar } from "@/components/navbar/navbar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className="min-h-screen">
       <div className="flex justify-center">
         <NavBar />
       </div>
