@@ -27,7 +27,7 @@ function UploadPage() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-800 my-8 text-center max-w-2xl">
+      <p className="container text-xs text-gray-800 my-8 text-center max-w-2xl">
         By submitting your videos to Dopalearn, you acknowledge that you agree
         to Dopalearn's Terms of Service and Community Guidelines. Please be sure
         not to violate others' copyright or privacy rights.{" "}
