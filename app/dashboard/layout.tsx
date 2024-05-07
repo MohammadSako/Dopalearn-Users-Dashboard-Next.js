@@ -1,10 +1,11 @@
 import SideNav from "@/components/dashboard/sidenav";
 import { NavBar } from "@/components/navbar/navbar";
+import { Separator } from "@/components/ui/separator";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <NavBar />
       </div>
       <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -12,7 +13,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="w-full flex-none md:w-64">
           <SideNav />
         </div>
-        <div className="flex-grow p-6 md:overflow-y-auto md:p-12 bg-gray-50">
+        <div className="hidden lg:block">
+          <Separator orientation="vertical" />
+        </div>
+        <div className="flex-grow md:overflow-y-auto md:p-12">
           {children}
         </div>
       </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { MdCloudUpload, MdOutlineVideocam, MdVideoFile  } from "react-icons/md";
-
+import { MdCloudUpload } from "react-icons/md";
 import Link from "next/link";
+import UploadInfo from "../ui/upload-info";
 
 function UploadPage() {
   return (
     <div className="grid justify-items-center">
-      <div className="border-2 shadow-lg p-10 h-auto w-full grow  bg-white rounded-lg ">
+      <div className="md:border-2 shadow-lg p-10 h-auto w-full grow  bg-white md:rounded-lg ">
         <div className="grid justify-items-center border-dashed border-2 border-gray-300 rounded-lg bg-gray-100 py-10">
           <div className="rounded-full bg-gray-100 p-3  ">
             <MdCloudUpload size={60} color="gray" />
@@ -20,48 +20,10 @@ function UploadPage() {
             Select Videos
           </Button>
         </div>
-        <div className="flex flex-row mt-5">
-          <div className="basis-1/4 flex flex-row gap-2">
-            <MdOutlineVideocam size={33} color="#4b5563" className="-mt-1"/>
-            <div className="flex flex-col">
-              <h3 className="text-md font-bold">Size and duration</h3>
-              <div className="text-sm font-normal text-gray-600">
-                <p>Maximum size: 200 MB, video</p>
-                <p>duration: 30 minutes</p>
-              </div>
-            </div>
+        <div className="md:flex md:flex-row gap-2 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 ">
+            <UploadInfo />
           </div>
-          <div className="basis-1/4 flex flex-row gap-2">
-            <MdVideoFile size={33} color="#4b5563" className="-mt-1"/>
-            <div className="flex flex-col">
-              <h3 className="text-md font-bold">Size and duration</h3>
-              <div className="text-sm font-normal text-gray-600">
-                <p>Maximum size: 200 MB, video</p>
-                <p>duration: 30 minutes</p>
-              </div>
-            </div>
-          </div>
-          <div className="basis-1/4 flex flex-row gap-2">
-            <MdOutlineVideocam size={33} color="#4b5563" className="-mt-1"/>
-            <div className="flex flex-col">
-              <h3 className="text-md font-bold">Size and duration</h3>
-              <div className="text-sm font-normal text-gray-600">
-                <p>Maximum size: 200 MB, video</p>
-                <p>duration: 30 minutes</p>
-              </div>
-            </div>
-          </div>
-          <div className="basis-1/4 flex flex-row gap-2">
-            <MdOutlineVideocam size={33} color="#4b5563" className="-mt-1"/>
-            <div className="flex flex-col">
-              <h3 className="text-md font-bold">Size and duration</h3>
-              <div className="text-sm font-normal text-gray-600">
-                <p>Maximum size: 200 MB, video</p>
-                <p>duration: 30 minutes</p>
-              </div>
-            </div>
-          </div>
-       
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Privacy() {
   return (
-    <div className="container flex min-h-screen flex-col items-center my-4">
+    <div>
       <p className="my-8 text-gray-500">
         <Link href="#dopalearn">
           <span>© Dopalearn</span> ·
