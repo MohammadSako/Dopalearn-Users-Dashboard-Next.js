@@ -17,14 +17,16 @@ export default function SideNav() {
         <NavLinks />
         <div className="hidden h-auto w-full grow rounded-md md:block"></div>
         <form
-          // action={async () => {
-          //   "use server";
-          //   await signOut();
-          // }}
+        // action={async () => {
+        //   "use server";
+        //   await signOut();
+        // }}
         >
           <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md p-3 text-lg font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
             <GoSignOut className="w-6" />
-            <div className="hidden md:block">Sign Out</div>
+            <Link href="/">
+              <div className="hidden md:block">Sign Out</div>
+            </Link>
           </button>
         </form>
       </div>

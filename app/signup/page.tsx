@@ -1,25 +1,60 @@
-import React from "react";
+import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { SignUpForm } from "@/components/form/signupform";
 
-function SignUp() {
+import { cn } from "@/lib/utils";
+import { UserAuthForm } from "@/components/form/signupform";
+import { buttonVariants } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Authentication",
+  description: "Authentication forms built using the components.",
+};
+
+export default function SignUp() {
   return (
-    <div className="rounded-lg border-2 shadow-lg p-5 mt-10 w-96">
-      <h2 className="font-medium text-lg">Create your Dopalearn account</h2>
-
-      <div className="mt-5">
-        <SignUpForm />
-        <div>
-          <p className="mt-5 text-sm">
-            Have an account?
-            <Link href="/">
-              <span className="text-dopalearnblue"> Sign in</span>
-            </Link>
-          </p>
+    <>
+      <div className="container relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:px-0">
+        <Link
+          href="/"
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "md:absolute md:my-0 my-5 md:text-sm text-lg top-4 md:right-8 md:top-8"
+          )}
+        >
+          Login
+        </Link>
+        <div className="lg:p-8">
+          <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+            <div className="flex flex-col space-y-2 text-center">
+              <h1 className="text-2xl font-semibold tracking-tight">
+                Create an account
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                Enter your email below to create your account
+              </p>
+            </div>
+            <UserAuthForm />
+            <p className="px-8 text-center text-sm text-muted-foreground">
+              By clicking continue, you agree to our{" "}
+              <Link
+                href="/terms"
+                className="underline underline-offset-4 hover:text-primary"
+              >
+                Terms of Service
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/privacy"
+                className="underline underline-offset-4 hover:text-primary"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
-
-export default SignUp;

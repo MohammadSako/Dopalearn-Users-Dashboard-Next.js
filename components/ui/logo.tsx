@@ -3,7 +3,7 @@ import { AiOutlineTrademark } from "react-icons/ai";
 
 const logo = () => {
   return (
-    <div>
+    <div className="my-5">
       <div className="grid justify-items-end -mb-4 -mr-1" >
         <AiOutlineTrademark size={12}/>
       </div>

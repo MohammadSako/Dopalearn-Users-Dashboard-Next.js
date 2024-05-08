@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { NavBar } from "@/components/layouts/navbar";
+import { Footer } from "@/components/layouts/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +23,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <Suspense fallback={<Loading />}>
           {/* <Providers session={session}> */}
-            {/* <Navbar categories={categories} /> */}
-            <Suspense fallback={<Loading />}>{children}</Suspense>
-            {/* <Footer /> */}
+          <div className="flex justify-center ">
+            <NavBar />
+          </div>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+          {/* <Footer /> */}
           {/* </Providers> */}
         </Suspense>
       </body>

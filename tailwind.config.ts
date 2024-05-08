@@ -20,10 +20,17 @@ const config = {
     extend: {
       colors: {
         dopalearnblue: "#007AFF",
+        dopalearnlightblue: "#64D2FF",
+        dopalearndarkblue: "#5856D6",
         dopalearnred: "#FF3B30",
         dopalearngreen: "#34C759",
+        dopalearnlightgreen: "#00C7BE",
         dopalearnyellow: "#FDC500",
         dopalearnpurple: "#AF52DE",
+        dopalearnpink: "#F942FF",
+        dopalearnorange: "#FF9500",
+        dopalearnbrown: "#A2845E",
+        dopalearngray: "#808080",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
