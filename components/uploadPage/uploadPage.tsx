@@ -9,9 +9,7 @@ function UploadPage() {
     <div className="grid justify-items-center">
       <div className="md:border-2 shadow-lg p-10 h-auto w-full grow  bg-white md:rounded-lg ">
         <div className="grid justify-items-center border-dashed border-2 border-gray-300 rounded-lg bg-gray-100 py-10">
-          <div className="rounded-full bg-gray-100 p-3  ">
-            <MdCloudUpload size={60} color="gray" />
-          </div>
+          <MdCloudUpload size={60} color="gray" />
 
           <p className="text-xl font-bold">Select videos to upload</p>
           <p>Or drag and drop them here.</p>

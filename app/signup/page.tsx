@@ -1,29 +1,18 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
-import { UserAuthForm } from "@/components/form/signupform";
-import { buttonVariants } from "@/components/ui/button";
+import { SignUpForm } from "@/components/form/signupform";
+import GoogleAccount from "@/components/ui/google";
 
 export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Authentication forms built using the components.",
+  title: "Create an account",
+  description: "Create an account",
 };
 
 export default function SignUp() {
   return (
     <>
-      <div className="container relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:px-0">
-        <Link
-          href="/"
-          className={cn(
-            buttonVariants({ variant: "ghost" }),
-            "md:absolute md:my-0 my-5 md:text-sm text-lg top-4 md:right-8 md:top-8"
-          )}
-        >
-          Login
-        </Link>
+      <div className="container relative flex-col items-center justify-center md:grid lg:max-w-none lg:px-0 my-5">
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
             <div className="flex flex-col space-y-2 text-center">
@@ -34,24 +23,16 @@ export default function SignUp() {
                 Enter your email below to create your account
               </p>
             </div>
-            <UserAuthForm />
-            <p className="px-8 text-center text-sm text-muted-foreground">
-              By clicking continue, you agree to our{" "}
-              <Link
-                href="/terms"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Terms of Service
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="/privacy"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Privacy Policy
-              </Link>
-              .
-            </p>
+            <SignUpForm />
+            <GoogleAccount />
+            <div className="text-center">
+              <p>
+                Already on Dopalearn?{" "}
+                <Link href="/" className="text-dopalearnblue">
+                  Sign in
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

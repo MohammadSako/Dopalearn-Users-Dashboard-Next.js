@@ -13,7 +13,6 @@ import {
 } from "../ui/form";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { useRouter } from "next/navigation";
 import { RxReload } from "react-icons/rx";
 
 const formSchema = z.object({
@@ -28,9 +27,7 @@ export const ForgotPasswordForm = () => {
     },
   });
 
-  const router = useRouter();
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {}
+  async function onSubmit() {}
 
   return (
     <Form {...form}>
@@ -53,12 +50,7 @@ export const ForgotPasswordForm = () => {
             </FormItem>
           )}
         />
-        <Button
-          // size="xl"
-          className="w-full text-xl "
-          type="submit"
-          disabled={form.formState.isSubmitting || form.formState.isLoading}
-        >
+        <Button className="w-full text-xl " type="submit">
           {form.formState.isSubmitting || form.formState.isLoading ? (
             <RxReload className="animate-spin" />
           ) : (
