@@ -1,11 +1,21 @@
 import React from "react";
-
+import KeyMetrics from "@/components/dashboard/overview/keymetrics";
+import LatestComments from "@/components/dashboard/overview/latest-comments";
+import RecentPosts from "@/components/dashboard/overview/recent-posts";
+import UserAccount from "@/components/dashboard/overview/user-account";
 
 function Home() {
   return (
-    <div className="grid justify-items-center">
-      <div className="grid justify-items-center rounded-lg border-2 shadow-lg p-5 mt-10 w-96  space-y-8">
-        <h2 className="font-medium text-lg">Home Page</h2>
+    <div className="mx-auto max-w-7xl sm:px-6 lg:px-4">
+      <div className="flex lg:flex-row md:flex-col flex-col-reverse gap-4">
+        <div className="basis-4/6 space-y-4">
+          <KeyMetrics />
+          <LatestComments />
+        </div>
+        <div className="basis-2/6 space-y-4">
+          <UserAccount />
+          <RecentPosts />
+        </div>
       </div>
     </div>
   );

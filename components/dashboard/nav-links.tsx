@@ -1,10 +1,9 @@
 "use client";
 
 import {
-  MdCloudUpload,
   MdHome,
   MdOutlineFormatListBulleted,
-  MdOutlineAnalytics ,
+  MdOutlineAnalytics,
   MdOutlineFeedback,
 } from "react-icons/md";
 import { BsChatDots } from "react-icons/bs";
@@ -23,7 +22,7 @@ const links = [
     icon: MdOutlineFormatListBulleted,
   },
   { name: "Comments", href: "/dashboard/comments", icon: BsChatDots },
-  { name: "Analytics", href: "/dashboard/analytics", icon: MdOutlineAnalytics  },
+  { name: "Analytics", href: "/dashboard/analytics", icon: MdOutlineAnalytics },
   { name: "Feedback", href: "/dashboard/feedback", icon: MdOutlineFeedback },
 ];
 

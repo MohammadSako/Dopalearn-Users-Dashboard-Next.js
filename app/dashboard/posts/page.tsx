@@ -1,14 +1,11 @@
+import Posts from "@/components/dashboard/posts/posts";
 import React from "react";
 
 
-function Posts() {
+function PostsPage() {
   return (
-    <div className="grid justify-items-center">
-      <div className="grid justify-items-center rounded-lg border-2 shadow-lg p-5 mt-10 w-96  space-y-8">
-        <h2 className="font-medium text-lg">Your Posts</h2>
-      </div>
-    </div>
+    <Posts />
   );
 }
 
-export default Posts;
+export default PostsPage;

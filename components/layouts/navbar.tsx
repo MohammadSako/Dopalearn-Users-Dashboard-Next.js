@@ -12,16 +12,16 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import Logo from "../ui/logo";
 import Image from "next/image";
+import Dopalearnlogo from "../ui/dopalearnlogo";
 
 export function NavBar() {
   return (
-    <NavigationMenu className="h-20 z-50 mt-5">
+    <NavigationMenu className="h-20 z-50 mt-1">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <Logo />
+            <Dopalearnlogo />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
