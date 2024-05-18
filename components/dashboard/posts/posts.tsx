@@ -1,9 +1,7 @@
 "use client";
 
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
-import Link from "next/link";
 import { useState } from "react";
 import {
   Select,
@@ -12,6 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import PostsSearchFilter from "@/components/ui/posts-searchfilter";
+import PostsList from "@/components/ui/posts-list";
 
 function Posts() {
   const [data, setData] = useState("");
@@ -31,36 +31,16 @@ function Posts() {
   }
 
   return (
-    <div className=" h-96 p-4 rounded-lg shadow-lg bg-white">
-      <div className="flex flex-col space-y-4">
+    <div className=" p-4 rounded-lg shadow-lg bg-white">
+      <div className="flex flex-col space-y-6">
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">Manage your posts</p>
         </div>
-        <div className="flex items-center rounded-lg bg-white dark:bg-gray-800  space-x-2">
-          <Input
-            className="flex-1 rounded-lg py-2 px-4 leading-none text-gray-800 dark:text-white bg-transparent focus:outline-none"
-            placeholder="Search..."
-            type="text"
-          />
-        </div>
 
-        <div className="flex flex-row">
-          <div>
-            <Select>
-              <SelectTrigger className="w-auto">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="date">date</SelectItem>
-                <SelectItem value="dark">Dark</SelectItem>
-                <SelectItem value="system">System</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
+        <PostsSearchFilter />
+        <PostsList />
 
-        {!data && <NoData />}
-        {data && <div className="mt-4 bg-slate-200">Data</div>}
+        {/* {!data && <NoData />} */}
       </div>
     </div>
   );

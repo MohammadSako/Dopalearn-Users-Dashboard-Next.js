@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  MdHome,
-  MdOutlineFormatListBulleted,
-  MdOutlineAnalytics,
-  MdOutlineFeedback,
-} from "react-icons/md";
-import { BsChatDots } from "react-icons/bs";
+import { MdOutlineFeedback } from "react-icons/md";
+import { BsChatDots, BsBarChart, BsHouse, BsListUl } from "react-icons/bs";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,14 +10,14 @@ import clsx from "clsx";
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
-  { name: "Home", href: "/dashboard", icon: MdHome },
+  { name: "Home", href: "/dashboard", icon: BsHouse },
   {
     name: "Posts",
     href: "/dashboard/posts",
-    icon: MdOutlineFormatListBulleted,
+    icon: BsListUl,
   },
   { name: "Comments", href: "/dashboard/comments", icon: BsChatDots },
-  { name: "Analytics", href: "/dashboard/analytics", icon: MdOutlineAnalytics },
+  { name: "Analytics", href: "/dashboard/analytics", icon: BsBarChart },
   { name: "Feedback", href: "/dashboard/feedback", icon: MdOutlineFeedback },
 ];
 
