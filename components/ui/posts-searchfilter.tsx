@@ -29,15 +29,15 @@ const PostsSearchFilter = () => {
         />
       </div>
 
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row flex-wrap gap-4">
         {filters.map((filter) => (
           <Select key={filter.name}>
-            <SelectTrigger className="w-auto" chevronIconClassName="w-8">
-              <SelectValue placeholder={filter.name} />
+            <SelectTrigger className="w-auto" chevronIconClassName="ml-2">
+              <SelectValue  placeholder={filter.name} />
             </SelectTrigger>
             <SelectContent>
               {filter.items.map((item) => (
-                <SelectItem value="date">{item}</SelectItem>
+                <SelectItem value={item}>{item}</SelectItem>
               ))}
             </SelectContent>
           </Select>

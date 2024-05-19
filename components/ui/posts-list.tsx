@@ -77,7 +77,7 @@ const PostsList = () => {
   return (
     <>
       <Separator className="my-4" />
-      <div>
+      <>
         <Table>
           <TableCaption>A list of your recent Videos</TableCaption>
 
@@ -87,12 +87,8 @@ const PostsList = () => {
                 Posts
               </TableHead>
               <TableHead className="text-gray-400">Actions</TableHead>
-              <div className="lg:contents hidden">
-                <TableHead className="text-gray-400">Status</TableHead>
-              </div>
-              <div className="lg:contents hidden">
-                <TableHead className="text-gray-400">Privacy</TableHead>
-              </div>
+              <TableHead className="text-gray-400 lg:table-cell hidden">Status</TableHead>
+              <TableHead className="text-gray-400 lg:table-cell hidden">Privacy</TableHead>
             </TableRow>
           </TableHeader>
 
@@ -165,22 +161,18 @@ const PostsList = () => {
                     <BsTrash3 size={18} />
                   </div>
                 </TableCell>
-                <div className="lg:contents hidden">
-                  <TableCell>
-                    <span className="text-gray-400 font-medium bg-gray-50 p-1 rounded-sm">
-                      Posted
-                    </span>{" "}
-                    <span>{post.status}</span>
-                  </TableCell>
-                </div>
-                <div className="lg:contents hidden">
-                  <TableCell>{post.privacy}</TableCell>
-                </div>
+                <TableCell className="lg:table-cell hidden">
+                  <span className="text-gray-400 font-medium bg-gray-50 p-1 rounded-sm">
+                    Posted
+                  </span>{" "}
+                  <span>{post.status}</span>
+                </TableCell>
+                <TableCell className="lg:table-cell hidden">{post.privacy}</TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-      </div>
+      </>
     </>
   );
 };
