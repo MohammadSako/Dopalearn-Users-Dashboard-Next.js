@@ -1,14 +1,12 @@
+
+import Comments from "@/components/dashboard/comments/comments";
 import React from "react";
 
 
-function Comments() {
+function CommentsPage() {
   return (
-    <div className="grid justify-items-center">
-      <div className="grid justify-items-center rounded-lg border-2 shadow-lg p-5 mt-10 w-96  space-y-8">
-        <h2 className="font-medium text-lg">Your Comments</h2>
-      </div>
-    </div>
+    <Comments />
   );
 }
 
-export default Comments;
+export default CommentsPage;

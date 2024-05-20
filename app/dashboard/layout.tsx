@@ -1,5 +1,6 @@
 import SideNav from "@/components/dashboard/sidenav";
 import { Separator } from "@/components/ui/separator";
+import DashboardSkeleton, { HomeSkeleton, UploadSkeleton } from "@/components/ui/skeletons";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

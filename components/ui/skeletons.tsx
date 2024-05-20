@@ -32,7 +32,7 @@ export function CardsSkeleton() {
 export function RevenueChartSkeleton() {
   return (
     <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
-      <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
+      {/* <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" /> */}
       <div className="rounded-xl bg-gray-100 p-4">
         <div className="mt-0 grid h-[410px] grid-cols-12 items-end gap-2 rounded-md bg-white p-4 sm:grid-cols-13 md:gap-4" />
         <div className="flex items-center pb-2 pt-6">
@@ -82,33 +82,6 @@ export function LatestInvoicesSkeleton() {
   );
 }
 
-export default function DashboardSkeleton() {
-  return (
-    <div className="container min-h-screen">
-      <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <div className="flex flex-col md:flex-row md:overflow-hidden">
-        <div className="w-full flex-none md:w-64 md:pt-12">
-          <LatestInvoicesSkeleton />{" "}
-        </div>
-
-        <div className="flex-grow md:overflow-y-auto md:p-12">
-          <RevenueChartSkeleton />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function HomeSkeleton() {
-  return (
-    <div className="container min-h-screen">
-      <div className="flex-grow md:overflow-y-auto md:p-12">
-        <RevenueChartSkeleton />
-      </div>
-    </div>
-  );
-}
-
 export function UploadSkeleton() {
   return (
     <div className="flex justify-center">
@@ -137,28 +110,21 @@ export function TableRowSkeleton() {
           <div className="h-6 w-24 rounded bg-gray-100"></div>
         </div>
       </td>
-      {/* Email */}
-      <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-32 rounded bg-gray-100"></div>
-      </td>
-      {/* Amount */}
-      <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
-      </td>
-      {/* Date */}
-      <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
-      </td>
-      {/* Status */}
-      <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
-      </td>
-      {/* Actions */}
       <td className="whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex justify-end gap-3">
           <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
           <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
         </div>
+      </td>
+      <td className="whitespace-nowrap px-8 py-3">
+        <div className="h-6 w-32 rounded bg-gray-100"></div>
+      </td>
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-16 rounded bg-gray-100"></div>
+      </td>
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-16 rounded bg-gray-100"></div>
       </td>
     </tr>
   );
@@ -237,6 +203,163 @@ export function InvoicesTableSkeleton() {
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+  );
+}
+
+// My page defualt Skeletons
+
+export default function DashboardSkeleton() {
+  return (
+    <div className="container min-h-screen">
+      <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 p-4">
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-4">
+          <div className="flex lg:flex-row md:flex-col flex-col-reverse gap-4">
+            <div className="basis-4/6 space-y-4">
+              <KeymetricsSkeleton />
+              <KeymetricsSkeleton />
+            </div>
+            <div className="basis-2/6 space-y-4">
+              <AccountSkeleton />
+              <RecentPostsSkeleton />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// export function HomeSkeleton() {
+//   return (
+//     <div className="container min-h-screen">
+//       <div className="flex-grow md:overflow-y-auto md:p-12">
+//         <RevenueChartSkeleton />
+//       </div>
+//     </div>
+//   );
+// }
+export function HomeSkeleton() {
+  return (
+    <div className="min-h-screen">
+      <hr className="h-px bg-gray-100 border-0 dark:bg-gray-700"></hr>
+      <div className="flex flex-col md:flex-row md:overflow-hidden">
+        <div className="w-full flex-none md:w-64">
+          <div className="m-2 grid h-[410px] grid-cols-12 items-end gap-2 bg-gray-200 p-4 sm:grid-cols-13 md:gap-4" />
+        </div>
+        <DashboardSkeleton />
+      </div>
+    </div>
+  );
+}
+
+export function KeymetricsSkeleton() {
+  return (
+    <div className=" h-96 p-4 rounded-lg shadow-lg bg-white space-y-6">
+      <div className="h-12 rounded-xl bg-gray-100 p-4" />
+      <div className="h-64 bg-gray-200 rounded-lg" />
+    </div>
+  );
+}
+
+export function AccountSkeleton() {
+  return (
+    <div className=" h-32 p-4 rounded-lg shadow-lg bg-white space-y-6">
+      <div className="h-6 rounded-md bg-gray-100" />
+      <div className="h-12 bg-gray-200 rounded-lg" />
+    </div>
+  );
+}
+
+export function RecentPostsSkeleton() {
+  return (
+    <div className=" h-96 p-4 rounded-lg shadow-lg bg-white space-y-6">
+      <div className="h-12 rounded-md bg-gray-100" />
+      <div className="h-64 bg-gray-200 rounded-lg" />
+    </div>
+  );
+}
+export function PostsSkeleton() {
+  return (
+    <div className=" p-4 rounded-lg shadow-lg bg-white">
+      <div className="flex flex-col space-y-6">
+        <div className="h-10 rounded-md bg-gray-100" />
+        <table className="hidden min-w-full text-gray-900 md:table">
+          <thead className="rounded-lg text-left text-sm font-normal">
+            <tr>
+              <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                Sort by
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+                All vidoes views
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+                All comments
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+                All likes
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+                All privacy
+              </th>
+              <th scope="col" className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white">
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+export function CommentsSkeleton() {
+  return (
+    <div className=" p-4 rounded-lg shadow-lg bg-white">
+      <div className="flex flex-col space-y-6">
+        <div className="h-10 rounded-md bg-gray-100" />
+        <table className="hidden min-w-full text-gray-900 md:table">
+          <thead className="rounded-lg text-left text-sm font-normal">
+            <tr>
+              <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+              All comments
+
+
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+              Posted by all
+
+
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+              All follower counts
+              </th>
+              <th scope="col" className="px-3 py-5 font-medium">
+                Jan 20, 2022 - Sep 15 2022
+              </th>
+              
+              <th scope="col" className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white">
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+            <TableRowSkeleton />
+          </tbody>
+        </table>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-import HomeSkeleton from "@/components/ui/skeletons";
+import DashboardSkeleton from "@/components/ui/skeletons";
 
 export default function Loading() {
-  return <HomeSkeleton />;
+  return <DashboardSkeleton />;
 }

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
+import { MdArrowForwardIos } from "react-icons/md";
 
 function RecentPosts() {
   const [data, setData] = useState("");
@@ -25,11 +26,10 @@ function RecentPosts() {
     <div className=" h-96 p-4 rounded-lg shadow-lg bg-white">
       <div className="flex flex-col">
         <div className="flex flex-row justify-between ">
-          <div className="flex flex-row gap-4 ">
-            <Link href="#">
-              <p className="text-2xl font-bold">Recent Posts</p>
-            </Link>
-          </div>
+          <p className="text-2xl font-bold">Recent Posts</p>
+          <Link href="/dashboard/posts">
+            <MdArrowForwardIos size={16} color="#808080" className="mt-2" />
+          </Link>
         </div>
         {!data && <NoData />}
         {data && <div className="mt-4 bg-slate-200">Data</div>}

@@ -26,16 +26,12 @@ function KeyMetrics() {
       <div className="flex flex-col">
         <div className="flex flex-row justify-between ">
           <div className="flex flex-row gap-4 ">
-            <Link href="/dashboard/analytics/keymetrics">
-              <p className="text-2xl font-bold">Key metrics</p>
-            </Link>
-            <Link href="#">
-              <p className="text-sm font-medium mt-2 text-dopalearngray">
-                Last 7 days
-              </p>
-            </Link>
+            <p className="text-2xl font-bold">Key metrics</p>
+            <p className="text-md font-medium mt-2 text-dopalearngray">
+              Last 7 days
+            </p>
           </div>
-          <Link href="#">
+          <Link href="/dashboard/analytics/keymetrics">
             <div className="flex flex-row gap-1">
               <p className="text-md font-medium text-dopalearngray">Show all</p>
               <div className="mt-1 text-dopalearngray">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GoSignOut } from "react-icons/go";
 import NavLinks from "./nav-links";
+import { Separator } from "../ui/separator";
 
 export default function SideNav() {
   return (
@@ -13,6 +14,7 @@ export default function SideNav() {
           Upload
         </div>
       </Link>
+      <Separator />
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
         <div className="hidden h-auto w-full grow rounded-md md:block"></div>
