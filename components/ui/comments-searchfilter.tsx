@@ -13,8 +13,14 @@ import DatePicker from "./date-paker";
 
 const filters = [
   { name: "All comments", items: ["All comments", "Not replied", "Replied"] },
-  { name: "Posted by all", items: ["Posted by all", "Posted by followers", "Posted by non-followers"] },
-  { name: "All follower counts", items: ["All follower counts", "<5K", "5K-10K", "10K-100K", ">100K"] },
+  {
+    name: "Posted by all",
+    items: ["Posted by all", "Posted by followers", "Posted by non-followers"],
+  },
+  {
+    name: "All follower counts",
+    items: ["All follower counts", "<5K", "5K-10K", "10K-100K", ">100K"],
+  },
 ];
 
 const CommentsSearchFilter = () => {
@@ -31,7 +37,10 @@ const CommentsSearchFilter = () => {
       <div className="flex flex-row flex-wrap gap-4">
         {filters.map((filter) => (
           <Select key={filter.name}>
-            <SelectTrigger className="w-auto" chevronIconClassName="ml-2">
+            <SelectTrigger
+              className="w-auto hover:bg-sky-100"
+              chevronIconClassName="ml-2"
+            >
               <SelectValue placeholder={filter.name} />
             </SelectTrigger>
             <SelectContent>
