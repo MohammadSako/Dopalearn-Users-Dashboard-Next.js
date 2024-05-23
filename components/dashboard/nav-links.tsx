@@ -17,7 +17,16 @@ const links = [
     icon: BsListUl,
   },
   { name: "Comments", href: "/dashboard/comments", icon: BsChatDots },
-  { name: "Analytics", href: "/dashboard/analytics", icon: BsBarChart },
+  {
+    name: "Analytics",
+    href: "/dashboard/analytics",
+    icon: BsBarChart,
+    sub: [
+      { name: "Key metrics", href: "/dashboard/analytics/keymetrics"},
+      { name: "Content", href: "/dashboard/analytics/content"},
+      { name: "Followers", href: "/dashboard/analytics/followers"},
+    ],
+  },
   { name: "Feedback", href: "/dashboard/feedback", icon: MdOutlineFeedback },
 ];
 

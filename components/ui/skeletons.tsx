@@ -1,4 +1,5 @@
-// Loading animation
+import { Skeleton } from "@/components/ui/skeleton";
+
 const shimmer =
   "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent";
 
@@ -8,11 +9,11 @@ export function CardSkeleton() {
       className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}
     >
       <div className="flex p-4">
-        <div className="h-5 w-5 rounded-md bg-gray-200" />
-        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
+        <Skeleton className="h-5 w-5 rounded-md bg-gray-200" />
+        <Skeleton className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
       </div>
       <div className="flex items-center justify-center truncate rounded-xl bg-white px-4 py-8">
-        <div className="h-7 w-20 rounded-md bg-gray-200" />
+        <Skeleton className="h-7 w-20 rounded-md bg-gray-200" />
       </div>
     </div>
   );
@@ -36,8 +37,8 @@ export function RevenueChartSkeleton() {
       <div className="rounded-xl bg-gray-100 p-4">
         <div className="mt-0 grid h-[410px] grid-cols-12 items-end gap-2 rounded-md bg-white p-4 sm:grid-cols-13 md:gap-4" />
         <div className="flex items-center pb-2 pt-6">
-          <div className="h-5 w-5 rounded-full bg-gray-200" />
-          <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
+          <Skeleton className="h-5 w-5 rounded-full bg-gray-200" />
+          <Skeleton className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
         </div>
       </div>
     </div>
@@ -48,13 +49,13 @@ export function InvoiceSkeleton() {
   return (
     <div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
       <div className="flex items-center">
-        <div className="mr-2 h-8 w-8 rounded-full bg-gray-200" />
+        <Skeleton className="mr-2 h-8 w-8 rounded-full bg-gray-200" />
         <div className="min-w-0">
-          <div className="h-5 w-40 rounded-md bg-gray-200" />
-          <div className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
+          <Skeleton className="h-5 w-40 rounded-md bg-gray-200" />
+          <Skeleton className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
         </div>
       </div>
-      <div className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
+      <Skeleton className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
     </div>
   );
 }
@@ -64,7 +65,7 @@ export function LatestInvoicesSkeleton() {
     <div
       className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4`}
     >
-      <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
+      <Skeleton className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-100 p-4">
         <div className="bg-white px-6">
           <InvoiceSkeleton />
@@ -73,8 +74,8 @@ export function LatestInvoicesSkeleton() {
           <InvoiceSkeleton />
           <InvoiceSkeleton />
           <div className="flex items-center pb-2 pt-6">
-            <div className="h-5 w-5 rounded-full bg-gray-200" />
-            <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
+            <Skeleton className="h-5 w-5 rounded-full bg-gray-200" />
+            <Skeleton className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
           </div>
         </div>
       </div>
@@ -87,14 +88,14 @@ export function UploadSkeleton() {
     <div className="flex justify-center">
       <div className="md:border-2 p-10 h-auto w-full grow  bg-white md:rounded-lg ">
         <div className="grid justify-items-center space-y-6 border-gray-300 rounded-lg bg-gray-100 py-10">
-          <div className="w-16 h-16 rounded-md bg-gray-200" />
-          <div className="w-52 h-6 bg-gray-200" />
-          <div className="w-52 h-6 bg-gray-200" />
+          <Skeleton className="w-16 h-16 rounded-md bg-gray-200" />
+          <Skeleton className="w-52 h-6 bg-gray-200" />
+          <Skeleton className="w-52 h-6 bg-gray-200" />
         </div>
         <div className="md:flex md:flex-row gap-2 w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 "></div>
         </div>
-        <div className=" h-6 bg-gray-200 mt-6 rounded-md" />
+        <Skeleton className=" h-6 bg-gray-200 mt-6 rounded-md" />
       </div>
     </div>
   );
@@ -106,25 +107,25 @@ export function TableRowSkeleton() {
       {/* Customer Name and Image */}
       <td className="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-gray-100"></div>
-          <div className="h-6 w-24 rounded bg-gray-100"></div>
+          <Skeleton className="h-8 w-8 rounded-full bg-gray-100" />
+          <Skeleton className="h-6 w-24 rounded bg-gray-100" />
         </div>
       </td>
       <td className="whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex justify-end gap-3">
-          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
-          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
-          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+          <Skeleton className="h-[38px] w-[38px] rounded bg-gray-100" />
+          <Skeleton className="h-[38px] w-[38px] rounded bg-gray-100" />
+          <Skeleton className="h-[38px] w-[38px] rounded bg-gray-100" />
         </div>
       </td>
       <td className="whitespace-nowrap px-8 py-3">
-        <div className="h-6 w-32 rounded bg-gray-100"></div>
+        <Skeleton className="h-6 w-32 rounded bg-gray-100" />
       </td>
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <Skeleton className="h-6 w-16 rounded bg-gray-100" />
       </td>
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <Skeleton className="h-6 w-16 rounded bg-gray-100" />
       </td>
     </tr>
   );
@@ -135,19 +136,19 @@ export function InvoicesMobileSkeleton() {
     <div className="mb-2 w-full rounded-md bg-white p-4">
       <div className="flex items-center justify-between border-b border-gray-100 pb-8">
         <div className="flex items-center">
-          <div className="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
-          <div className="h-6 w-16 rounded bg-gray-100"></div>
+          <Skeleton className="mr-2 h-8 w-8 rounded-full bg-gray-100" />
+          <Skeleton className="h-6 w-16 rounded bg-gray-100" />
         </div>
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <Skeleton className="h-6 w-16 rounded bg-gray-100" />
       </div>
       <div className="flex w-full items-center justify-between pt-4">
         <div>
-          <div className="h-6 w-16 rounded bg-gray-100"></div>
-          <div className="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+          <Skeleton className="h-6 w-16 rounded bg-gray-100" />
+          <Skeleton className="mt-2 h-6 w-24 rounded bg-gray-100" />
         </div>
         <div className="flex justify-end gap-2">
-          <div className="h-10 w-10 rounded bg-gray-100"></div>
-          <div className="h-10 w-10 rounded bg-gray-100"></div>
+          <Skeleton className="h-10 w-10 rounded bg-gray-100" />
+          <Skeleton className="h-10 w-10 rounded bg-gray-100" />
         </div>
       </div>
     </div>
@@ -212,9 +213,9 @@ export function InvoicesTableSkeleton() {
 
 export default function DashboardSkeleton() {
   return (
-    <div className="container min-h-screen">
-      <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 p-4">
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-4">
+    <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 p-4">
+      <div className="mx-auto max-w-7xl sm:px-6 lg:px-4">
+        <div className="mx-auto max-w-7xl sm:px-6 ">
           <div className="flex lg:flex-row md:flex-col flex-col-reverse gap-4">
             <div className="basis-4/6 space-y-4">
               <KeymetricsSkeleton />
@@ -231,22 +232,18 @@ export default function DashboardSkeleton() {
   );
 }
 
-// export function HomeSkeleton() {
-//   return (
-//     <div className="container min-h-screen">
-//       <div className="flex-grow md:overflow-y-auto md:p-12">
-//         <RevenueChartSkeleton />
-//       </div>
-//     </div>
-//   );
-// }
 export function HomeSkeleton() {
   return (
     <div className="min-h-screen">
-      <hr className="h-px bg-gray-100 border-0 dark:bg-gray-700"></hr>
       <div className="flex flex-col md:flex-row md:overflow-hidden">
-        <div className="w-full flex-none md:w-64">
-          <div className="m-2 grid h-[410px] grid-cols-12 items-end gap-2 bg-gray-200 p-4 sm:grid-cols-13 md:gap-4" />
+        <div className="w-full flex-none md:w-64 p-4 space-y-8">
+          <Skeleton className="h-16 bg-gray-200" />
+          <Skeleton className="h-8 w-28 bg-gray-200" />
+          <Skeleton className="h-8 w-28 bg-gray-200" />
+          <Skeleton className="h-8 w-36 bg-gray-200" />
+          <Skeleton className="h-8 w-32 bg-gray-200" />
+          <Skeleton className="h-8 w-32 bg-gray-200" />
+          <Skeleton className="h-8 w-32 bg-gray-200" />
         </div>
         <DashboardSkeleton />
       </div>
@@ -257,8 +254,8 @@ export function HomeSkeleton() {
 export function KeymetricsSkeleton() {
   return (
     <div className=" h-96 p-4 rounded-lg shadow-lg bg-white space-y-6">
-      <div className="h-12 rounded-xl bg-gray-100 p-4" />
-      <div className="h-64 bg-gray-200 rounded-lg" />
+      <Skeleton className="h-12 rounded-xl bg-gray-100 p-4" />
+      <Skeleton className="h-64 bg-gray-200 rounded-lg" />
     </div>
   );
 }
@@ -266,8 +263,8 @@ export function KeymetricsSkeleton() {
 export function AccountSkeleton() {
   return (
     <div className=" h-32 p-4 rounded-lg shadow-lg bg-white space-y-6">
-      <div className="h-6 rounded-md bg-gray-100" />
-      <div className="h-12 bg-gray-200 rounded-lg" />
+      <Skeleton className="h-6 rounded-md bg-gray-100" />
+      <Skeleton className="h-12 bg-gray-200 rounded-lg" />
     </div>
   );
 }
@@ -275,8 +272,8 @@ export function AccountSkeleton() {
 export function RecentPostsSkeleton() {
   return (
     <div className=" h-96 p-4 rounded-lg shadow-lg bg-white space-y-6">
-      <div className="h-12 rounded-md bg-gray-100" />
-      <div className="h-64 bg-gray-200 rounded-lg" />
+      <Skeleton className="h-12 rounded-md bg-gray-100" />
+      <Skeleton className="h-64 bg-gray-200 rounded-lg" />
     </div>
   );
 }
@@ -284,7 +281,7 @@ export function PostsSkeleton() {
   return (
     <div className=" p-4 rounded-lg shadow-lg bg-white">
       <div className="flex flex-col space-y-6">
-        <div className="h-10 rounded-md bg-gray-100" />
+        <Skeleton className="h-10 rounded-md bg-gray-100" />
         <table className="hidden min-w-full text-gray-900 md:table">
           <thead className="rounded-lg text-left text-sm font-normal">
             <tr>
@@ -321,31 +318,28 @@ export function PostsSkeleton() {
     </div>
   );
 }
+
 export function CommentsSkeleton() {
   return (
     <div className=" p-4 rounded-lg shadow-lg bg-white">
       <div className="flex flex-col space-y-6">
-        <div className="h-10 rounded-md bg-gray-100" />
+        <Skeleton className="h-10 rounded-md bg-gray-100" />
         <table className="hidden min-w-full text-gray-900 md:table">
           <thead className="rounded-lg text-left text-sm font-normal">
             <tr>
               <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-              All comments
-
-
+                All comments
               </th>
               <th scope="col" className="px-3 py-5 font-medium">
-              Posted by all
-
-
+                Posted by all
               </th>
               <th scope="col" className="px-3 py-5 font-medium">
-              All follower counts
+                All follower counts
               </th>
               <th scope="col" className="px-3 py-5 font-medium">
                 Jan 20, 2022 - Sep 15 2022
               </th>
-              
+
               <th scope="col" className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6">
                 <span className="sr-only">Edit</span>
               </th>
@@ -360,6 +354,80 @@ export function CommentsSkeleton() {
             <TableRowSkeleton />
           </tbody>
         </table>
+      </div>
+    </div>
+  );
+}
+
+export function FeedbackSkeleton() {
+  return (
+    <div className="container p-4 rounded-lg shadow-lg bg-white">
+      <div className="flex flex-col space-y-6">
+        <div className="flex flex-row">
+          <div className="lg:w-[300px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[200px] w-full">
+            <Skeleton className="h-6 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-20 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[150px] w-full">
+            <Skeleton className="h-6 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[150px] w-full">
+            <Skeleton className="h-6 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[300px] w-full">
+            <Skeleton className="h-6 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-40 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[150px] w-full">
+            <Skeleton className="h-6 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[500px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div className="lg:w-[150px] w-full">
+            <Skeleton className="h-10 rounded-md bg-gray-100" />
+          </div>
+        </div>
       </div>
     </div>
   );
