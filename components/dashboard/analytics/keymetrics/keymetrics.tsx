@@ -1,23 +1,20 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import KeyMetricsSearchFilter from "@/components/ui/keymetrics-searchfilter";
-import KeyMetricsComponents from "@/components/ui/keymetrics-components";
+import KeyMetricsComponents from "./keymetrics-components";
+import KeyMetricsSearchFilter from "./keymetrics-searchfilter";
+import VideoViews from "./keymetrics-videoviews";
+
+
 
 function Keymetrics() {
-  const [data, setData] = useState("");
-
-  function NoData() {
-    return (
-      <div className="p-20 flex flex-col items-center text-center">
-        <div>
-          <p className="m-3 text-xl font-bold">No results found</p>
-          <Button variant="outline">Clear all</Button>
-        </div>
-      </div>
-    );
-  }
+  const Metrics = [
+    { name: "Video views", count: "3,564" },
+    { name: "Profile views", count: "3,564" },
+    { name: "Likes", count: "10" },
+    { name: "Comments", count: "15" },
+    { name: "Shares", count: "3" },
+    { name: "Unique viewers", count: "2,556" },
+  ];
 
   return (
     <div className="p-4 rounded-lg shadow-lg bg-white">
@@ -27,8 +24,8 @@ function Keymetrics() {
         </div>
 
         <KeyMetricsSearchFilter />
-        <KeyMetricsComponents />
-
+        <KeyMetricsComponents data={Metrics} />
+        <VideoViews />
       </div>
     </div>
   );

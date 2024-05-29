@@ -1,9 +1,9 @@
 import React from "react";
+import Link from "next/link";
+import { Input } from "../ui/input";
+import UploadInfo from "./upload-info";
 import { Button } from "@/components/ui/button";
 import { MdCloudUpload } from "react-icons/md";
-import Link from "next/link";
-import UploadInfo from "../ui/upload-info";
-import { Input } from "../ui/input";
 
 function UploadPage() {
   return (

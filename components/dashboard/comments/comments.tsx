@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
 import { useState } from "react";
-import CommentsSearchFilter from "@/components/ui/comments-searchfilter";
 import { Button } from "@/components/ui/button";
+import CommentsSearchFilter from "./comments-searchfilter";
 
 function Comments() {
   const [data, setData] = useState("");

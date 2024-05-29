@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { useState } from "react";
 import { MdArrowForwardIos } from "react-icons/md";
 
 function RecentPosts() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState(false);
 
   function NoData() {
     return (
@@ -23,7 +23,7 @@ function RecentPosts() {
   }
 
   return (
-    <div className=" h-96 p-4 rounded-lg shadow-lg bg-white">
+    <div className="h-auto p-4 rounded-lg shadow-lg bg-white">
       <div className="flex flex-col">
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">Recent Posts</p>

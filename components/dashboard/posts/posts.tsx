@@ -1,12 +1,67 @@
-"use client";
+"use client"
 
 import { useState } from "react";
-import PostsSearchFilter from "@/components/ui/posts-searchfilter";
-import PostsList from "@/components/ui/posts-list";
 import { Button } from "@/components/ui/button";
+import PostsSearchFilter from "./posts-searchfilter";
+import PostsList from "./posts-list";
 
 function Posts() {
   const [data, setData] = useState("");
+
+  const posts = [
+    {
+      posts: "Turn screen time into learning time.",
+      href: "/dashboard/posts",
+      image: "/BrainBoosters.png",
+      status: "May 1, 2024 6:29 PM",
+      privacy: "Everyone",
+      views: "5.0K",
+      likes: "5",
+      comments: "25",
+      shared: "5",
+      bookmark: "2",
+      id:"id1"
+    },
+    {
+      posts: "Teach toddlers math with Dopalearn",
+      href: "/dashboard/posts",
+      image: "/post.jpg",
+      status: "Sep 20, 2023 3:05 PM",
+      privacy: "Only me",
+      views: "453",
+      likes: "36",
+      comments: "0",
+      shared: "0",
+      bookmark: "15",
+      id:"id2"
+    },
+    {
+      posts: "Turn screen time into learning time.",
+      href: "/dashboard/posts",
+      image: "/BrainBoosters.png",
+      status: "May 1, 2024 6:29 PM",
+      privacy: "Everyone",
+      views: "5.0K",
+      likes: "5",
+      comments: "25",
+      shared: "5",
+      bookmark: "2",
+      id:"id3"
+    },
+    {
+      posts: "Teach toddlers math with Dopalearn",
+      href: "/dashboard/posts",
+      image: "/post.jpg",
+      status: "Sep 20, 2023 3:05 PM",
+      privacy: "Only me",
+      views: "453",
+      likes: "36",
+      comments: "0",
+      shared: "0",
+      bookmark: "15",
+      id:"id4"
+    },
+  ];
 
   function NoData() {
     return (
@@ -27,7 +82,7 @@ function Posts() {
         </div>
 
         <PostsSearchFilter />
-        <PostsList />
+        <PostsList posts={posts} />
 
         {/* {!data && <NoData />} */}
       </div>

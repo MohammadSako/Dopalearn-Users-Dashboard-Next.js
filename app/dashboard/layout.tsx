@@ -1,6 +1,5 @@
 import SideNav from "@/components/dashboard/sidenav";
 import { Separator } from "@/components/ui/separator";
-import DashboardSkeleton, { HomeSkeleton, UploadSkeleton } from "@/components/ui/skeletons";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="hidden lg:block">
           <Separator orientation="vertical" />
         </div>
-        <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 p-4">
+        <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 py-4 px-8">
           {children}
         </div>
       </div>

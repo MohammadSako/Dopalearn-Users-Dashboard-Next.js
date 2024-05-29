@@ -1,9 +1,7 @@
-"use client";
+"use client"
 
 import * as React from "react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { MdHome } from "react-icons/md";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,7 +15,7 @@ import Dopalearnlogo from "../ui/dopalearnlogo";
 
 export function NavBar() {
   return (
-    <NavigationMenu className="h-20 z-50 mt-1">
+    <NavigationMenu className="h-20 z-50 my-1">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
@@ -38,8 +36,9 @@ export function NavBar() {
                       alt="BrainBoosters"
                     />
                     <div className="mb-2 mt-4 text-sm font-medium">
-                    <span className="font-bold text-lg">Dopalearn</span><br />
-                    Little Brain Boosters
+                      <span className="font-bold text-lg">Dopalearn</span>
+                      <br />
+                      Little Brain Boosters
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Visit Our Application Website.
