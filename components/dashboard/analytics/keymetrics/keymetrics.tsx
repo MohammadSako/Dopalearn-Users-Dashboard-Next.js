@@ -7,14 +7,6 @@ import VideoViews from "./keymetrics-videoviews";
 
 
 function Keymetrics() {
-  const Metrics = [
-    { name: "Video views", count: "3,564" },
-    { name: "Profile views", count: "3,564" },
-    { name: "Likes", count: "10" },
-    { name: "Comments", count: "15" },
-    { name: "Shares", count: "3" },
-    { name: "Unique viewers", count: "2,556" },
-  ];
 
   return (
     <div className="p-4 rounded-lg shadow-lg bg-white">
@@ -24,7 +16,7 @@ function Keymetrics() {
         </div>
 
         <KeyMetricsSearchFilter />
-        <KeyMetricsComponents data={Metrics} />
+        <KeyMetricsComponents />
         <VideoViews />
       </div>
     </div>

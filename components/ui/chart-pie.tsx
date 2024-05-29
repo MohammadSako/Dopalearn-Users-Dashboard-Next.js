@@ -1,7 +1,9 @@
-import { Chart } from "./chart";
+import * as React from "react";
 
 export default function ChartPie() {
   return (
-      <Chart />
+    <div className="container">
+      <p>Pie chart</p>
+    </div>
   );
 }

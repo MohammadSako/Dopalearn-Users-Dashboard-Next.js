@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +10,68 @@ import {
   BsReplyFill,
   BsBookmarkFill,
 } from "react-icons/bs";
-
-const ContentVideoPosts = ({ posts, info }) => {
+ 
+const ContentVideoPosts = () => {
   const [data, setData] = useState(true);
+  const posts = [
+    {
+      posts: "Turn screen time into learning time.",
+      href: "/dashboard/posts",
+      image: "/BrainBoosters.png",
+      status: "May 1, 2024 6:29 PM",
+      privacy: "Everyone",
+      views: "5.0K",
+      likes: "5",
+      comments: "25",
+      shared: "5",
+      bookmark: "2",
+      id: "id1",
+    },
+    {
+      posts: "Teach toddlers math with Dopalearn",
+      href: "/dashboard/posts",
+      image: "/post.jpg",
+      status: "Sep 20, 2023 3:05 PM",
+      privacy: "Only me",
+      views: "453",
+      likes: "36",
+      comments: "0",
+      shared: "0",
+      bookmark: "15",
+      id: "id2",
+    },
+    {
+      posts: "Turn screen time into learning time.",
+      href: "/dashboard/posts",
+      image: "/BrainBoosters.png",
+      status: "May 1, 2024 6:29 PM",
+      privacy: "Everyone",
+      views: "5.0K",
+      likes: "5",
+      comments: "25",
+      shared: "5",
+      bookmark: "2",
+      id: "id3",
+    },
+    {
+      posts: "Teach toddlers math with Dopalearn",
+      href: "/dashboard/posts",
+      image: "/post.jpg",
+      status: "Sep 20, 2023 3:05 PM",
+      privacy: "Only me",
+      views: "453",
+      likes: "36",
+      comments: "0",
+      shared: "0",
+      bookmark: "15",
+      id: "id4",
+    },
+  ];
+
+  
+  const video_posts =
+    "Shows videos from the last 7 days, in order of newest to oldest.";
+
 
   function NoData() {
     return (
@@ -33,7 +92,7 @@ const ContentVideoPosts = ({ posts, info }) => {
       {data && (
         <div>
           <div className="p-2 space-y-2 text-muted-foreground">
-            <p className="text-xs">{info}</p>
+            <p className="text-xs">{video_posts}</p>
             <p>
               <span className="text-lg font-semibold">{posts.length}</span>{" "}
               Posts

@@ -11,8 +11,40 @@ import {
   BsBookmarkFill,
 } from "react-icons/bs";
 
-const ContentTrendingVideos = ({ posts }) => {
+const ContentTrendingVideos = () => {
   const [data, setData] = useState(true);
+  
+  const trends = [
+    {
+      posts: "Teach toddlers math with Dopalearn",
+      href: "/dashboard/posts",
+      image: "/post.jpg",
+      status: "Sep 20, 2023 3:05 PM",
+      privacy: "Only me",
+      views: "453",
+      likes: "36",
+      comments: "0",
+      shared: "0",
+      bookmark: "15",
+      id: "id4",
+    },
+    {
+      posts: "Turn screen time into learning time.",
+      href: "/dashboard/posts",
+      image: "/BrainBoosters.png",
+      status: "May 1, 2024 6:29 PM",
+      privacy: "Everyone",
+      views: "5.0K",
+      likes: "5",
+      comments: "25",
+      shared: "5",
+      bookmark: "2",
+      id: "id1",
+    },
+  ];
+  
+  const video_trending =
+  "The top 9 videos with the fastest growth in view numbers over the past 7 days.";
 
   function NoData() {
     return (
@@ -34,14 +66,14 @@ const ContentTrendingVideos = ({ posts }) => {
         <div>
           <div className="p-2">
             <p>
-              <span className="text-lg font-semibold">{posts.length}</span>{" "}
+              <span className="text-lg font-semibold">{trends.length}</span>{" "}
               Posts
             </p>
             <p className="text-sm text-muted-foreground">
-              Last 7 days <span>{posts.length}</span> posts vs. May 15 - May 21{" "}
+              Last 7 days <span>{trends.length}</span> posts vs. May 15 - May 21{" "}
             </p>
           </div>
-          {posts.map((post) => (
+          {trends.map((post) => (
             <div className="p-6 my-4  md:shadow-lg shadow-md rounded-lg">
               <div className="flex flex-col md:flex-row md:justify-between">
                 <div className="flex lg:flex-row flex-row gap-2 justify-between">
