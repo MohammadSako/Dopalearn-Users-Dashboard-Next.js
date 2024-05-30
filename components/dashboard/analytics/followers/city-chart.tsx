@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { Chart } from "@/components/ui/chart";
+import ChartCity from "@/components/ui/chart-city";
 
 function CityChart() {
   return (
@@ -9,7 +9,7 @@ function CityChart() {
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">City</p>
         </div>
-        <Chart />
+        <ChartCity />
       </div>
     </div>
   );

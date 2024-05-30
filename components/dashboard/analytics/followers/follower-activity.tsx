@@ -1,6 +1,6 @@
 "use client";
 
-import { Chart } from "@/components/ui/chart";
+import ChartActivity from "@/components/ui/chart-activiy";
 
 function FollowerActivity() {
   return (
@@ -9,7 +9,7 @@ function FollowerActivity() {
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">Follower activity</p>
         </div>
-        <Chart />
+        <ChartActivity />
       </div>
     </div>
   );

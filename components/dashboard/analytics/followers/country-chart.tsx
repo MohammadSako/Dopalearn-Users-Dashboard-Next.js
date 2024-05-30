@@ -1,6 +1,6 @@
 "use client";
 
-import { Chart } from "@/components/ui/chart";
+import ChartCountry from "@/components/ui/chart-country";
 
 function CountryChart() {
   return (
@@ -9,7 +9,7 @@ function CountryChart() {
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">Counrty/region</p>
         </div>
-        <Chart />
+        <ChartCountry />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import React, { PureComponent } from "react";
 import {
   AreaChart,
   Area,
@@ -54,7 +53,7 @@ const data = [
   },
 ];
 
-export default function Chart() {
+export default function ChartActivity() {
   return (
     <ResponsiveContainer width="100%" minHeight={250}>
       <AreaChart

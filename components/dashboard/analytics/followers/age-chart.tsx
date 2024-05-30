@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { Chart } from "@/components/ui/chart";
+import ChartAge from "@/components/ui/chart-age";
 
 function AgeChart() {
   return (
@@ -9,7 +9,7 @@ function AgeChart() {
         <div className="flex flex-row justify-between ">
           <p className="text-2xl font-bold">Age</p>
         </div>
-        <Chart />
+        <ChartAge />
       </div>
     </div>
   );
