@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { MdOutlineFeedback } from "react-icons/md";
 import { BsChatDots, BsBarChart, BsHouse, BsListUl } from "react-icons/bs";
@@ -64,7 +64,15 @@ export default function NavLinks() {
                 </AccordionTrigger>
 
                 {link.sub?.map((subs) => (
-                  <Link href={subs.href} >
+                  <Link
+                    href={subs.href}
+                    className={clsx(
+                      "",
+                      {
+                        " text-dopalearnblue": pathname === subs.href,
+                      }
+                    )}
+                  >
                     <AccordionContent>{subs.name}</AccordionContent>
                   </Link>
                 ))}
