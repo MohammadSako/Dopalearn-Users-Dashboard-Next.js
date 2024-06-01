@@ -22,8 +22,8 @@ function TotalFollowers() {
             <p>-3 (0%) vs. Apr 19 - Apr 25</p>
           </div>
         </div>
-        <Chart />
         <Separator />
+        <Chart />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import {
   BsReplyFill,
   BsBookmarkFill,
 } from "react-icons/bs";
- 
+
 const ContentVideoPosts = () => {
   const [data, setData] = useState(true);
   const posts = [
@@ -68,10 +68,8 @@ const ContentVideoPosts = () => {
     },
   ];
 
-  
   const video_posts =
     "Shows videos from the last 7 days, in order of newest to oldest.";
-
 
   function NoData() {
     return (
@@ -91,13 +89,15 @@ const ContentVideoPosts = () => {
       {!data && <NoData />}
       {data && (
         <div>
-          <div className="p-2 space-y-2 text-muted-foreground">
+          <div className="text-muted-foreground">
             <p className="text-xs">{video_posts}</p>
+          </div>
+          <div className="p-2 mt-2 space-y-2 text-gray-600">
             <p>
               <span className="text-lg font-semibold">{posts.length}</span>{" "}
               Posts
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-gray-600">
               Last 7 days <span>{posts.length}</span> posts vs. May 15 - May 21{" "}
             </p>
           </div>

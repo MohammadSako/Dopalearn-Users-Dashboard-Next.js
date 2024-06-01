@@ -1,10 +1,11 @@
 import {
-  AreaChart,
-  Area,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -56,23 +57,30 @@ const data = [
 export default function ChartActivity() {
   return (
     <ResponsiveContainer width="100%" minHeight={250}>
-      <AreaChart
-        width={800}
-        height={250}
+      <LineChart
+        width={500}
+        height={300}
         data={data}
         margin={{
-          top: 10,
+          top: 5,
           right: 30,
-          left: 0,
-          bottom: 0,
+          left: 20,
+          bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
+        <Legend />
+        <Line
+          type="monotone"
+          dataKey="pv"
+          stroke="#007AFF"
+          activeDot={{ r: 8 }}
+        />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
     </ResponsiveContainer>
   );
 }

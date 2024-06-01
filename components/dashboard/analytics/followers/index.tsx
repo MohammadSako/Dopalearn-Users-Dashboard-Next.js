@@ -20,16 +20,16 @@ function Followers() {
   return (
     <div className="flex flex-col gap-4">
       <TotalFollowers />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-4">
         <GenderChart />
         <AgeChart />
         <CountryChart />
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-4">
         <div>
           <CityChart />
         </div>
-        <div className="col-span-2">
+        <div className="lg:col-span-2">
           <FollowerActivity />
         </div>
       </div>

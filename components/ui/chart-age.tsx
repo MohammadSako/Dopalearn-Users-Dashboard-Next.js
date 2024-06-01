@@ -26,7 +26,7 @@ const data = [
   {
     name: "Page C",
     uv: 2000,
-    pv: 9800,
+    pv: 800,
     amt: 2290,
   },
   {
@@ -64,25 +64,19 @@ export default function ChartAge() {
         data={data}
         margin={{
           top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
+          right: 20,
+          left: 5,
+          bottom: 0,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Legend />
-        <Bar
-          dataKey="pv"
-          fill="#8884d8"
-          activeBar={<Rectangle fill="pink" stroke="blue" />}
-        />
         <Bar
           dataKey="uv"
-          fill="#82ca9d"
-          activeBar={<Rectangle fill="gold" stroke="purple" />}
+          fill="#007AFF"
+          activeBar={<Rectangle fill="pink" stroke="blue" />}
         />
       </BarChart>
     </ResponsiveContainer>

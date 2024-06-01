@@ -47,15 +47,32 @@ const renderCustomizedLabel = (props: Props) => {
 export default function ChartPie() {
   return (
     <ResponsiveContainer width="100%" minHeight={250}>
-      <PieChart width={400} height={400}>
+      {/* <PieChart width={400} height={400}>
         <Pie
           data={data}
           labelLine={false}
           label={renderCustomizedLabel}
           // label={(item) => item.name}
-          fill="#8884d8"
+          fill="#007AFF"
           dataKey="value"
           nameKey="name"
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+        <Legend />
+      </PieChart> */}
+       <PieChart>
+        <Pie
+          data={data}
+          label={renderCustomizedLabel}
+          labelLine={false}
+          innerRadius={60}
+          outerRadius={100}
+          fill="#007AFF"
+          paddingAngle={1}
+          dataKey="value"
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

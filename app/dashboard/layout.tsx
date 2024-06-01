@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="hidden lg:block">
           <Separator orientation="vertical" />
         </div>
-        <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 py-4 px-8">
+        <div className="flex-grow md:overflow-y-auto h-screen bg-gray-50 py-4 px-4">
           {children}
         </div>
       </div>

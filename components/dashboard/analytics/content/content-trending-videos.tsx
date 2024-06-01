@@ -64,12 +64,15 @@ const ContentTrendingVideos = () => {
       {!data && <NoData />}
       {data && (
         <div>
-          <div className="p-2">
+          <div className="text-muted-foreground">
+            <p className="text-xs">{video_trending}</p>
+          </div>
+          <div className="p-2 mt-2 space-y-2 text-gray-600">
             <p>
               <span className="text-lg font-semibold">{trends.length}</span>{" "}
               Posts
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-gray-600">
               Last 7 days <span>{trends.length}</span> posts vs. May 15 - May 21{" "}
             </p>
           </div>

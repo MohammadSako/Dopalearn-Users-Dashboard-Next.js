@@ -49,17 +49,16 @@ function ChartCountry() {
         height={400}
         data={data}
         margin={{
-          top: 10,
-          right: 10,
-          bottom: 10,
-          left: 10,
+          top: 0,
+          right: 20,
+          bottom: 0,
+          left: 0,
         }}
       >
-        <CartesianGrid stroke="#f5f5f5" />
         <XAxis type="number" />
-        <YAxis dataKey="name" type="category" scale="band" />
+        <YAxis dataKey="name" type="category"/>
         <Tooltip />
-        <Bar dataKey="pv" barSize={20} fill="#413ea0" />
+        <Bar dataKey="pv" barSize={20} fill="#007AFF" />
       </ComposedChart>
     </ResponsiveContainer>
   );
