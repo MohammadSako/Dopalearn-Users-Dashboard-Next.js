@@ -10,7 +10,7 @@ function NoData() {
   );
 }
 function VideoViews() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState(false);
 
   return (
     <div className="p-2">
